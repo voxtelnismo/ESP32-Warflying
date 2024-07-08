@@ -1,5 +1,5 @@
 # ESP32-Warflying
-This project uses Ai Thinker ESP32 Cam module to wardrive.
+This is an airborne version of Alex Lynd's project (can be found here: https://github.com/AlexLynd/ESP8266-Wardriving)
 
 ![IMG_1288](https://github.com/voxtelnismo/ESP32-Warflying/assets/47276106/b90b6302-37df-4594-9575-b9c80c77862c)
 
