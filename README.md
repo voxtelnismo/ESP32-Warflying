@@ -24,10 +24,11 @@ Build instructions:
 
 1. Desolder the pin headers.
 2. Use FTDI adapter to upload code. Here is a great article on the specific quirks of ESP Cam: https://dronebotworkshop.com/esp32-cam-intro/
-3. Attach UART0 of the ESP32 to any hardware UART of the flight controller.
-4. Switch that port in INAV Configurator to MSP, baud rate 115200.
-5. Wire 5V and ground from ESP32 to 5V and ground on the FC. Do not use 4V5 pads, because ESP could pull more current than your USB port can provide.
+3. Attach UART0 of the ESP32 to any hardware UART of the flight controller (GPIO1 -> FC RX; GPIO3 -> FC TX).
+4. Wire 5V and ground from ESP32 to 5V and ground on the FC. Do not use 4V5 pads, because ESP could pull more current than your USB port can provide.
+5. Switch that port in INAV Configurator to MSP, baud rate 115200.
+6. Move the 0 Ohm resistor from PCB antenna to u.FL port, and attach a decent 2.4G antenna. (I'm using an ELRS 2.4G T-type dipole antenna)
 
-I'm using Caddx Vista with DJI controller (both on 5.8G), but you can also use 915MHz, like ELRS or Crossfire. I do not recommend using 2.4G ELRS, because when it's sending telemetry, it could easily fry the internal amp on ESP32. 
+I'm using Caddx Vista with DJI controller (both on 5.8G), but you can also use 915MHz, like ELRS or Crossfire. I do not recommend using 2.4G ELRS, because when it's sending telemetry, it could easily fry the internal amp on ESP32.
 
 The program polls the WiFi for all available SSIDs, records them in a table on SD card, then waits 5 seconds. It does not check for duplicates. Later I'm gonna write a Python script that removes duplicates and formats the GPS coordinates for Google Earth.
