@@ -1,11 +1,14 @@
 # ESP32-Warflying
 This project uses Ai Thinker ESP32 Cam module to wardrive.
 
+![IMG_1288](https://github.com/voxtelnismo/ESP32-Warflying/assets/47276106/b90b6302-37df-4594-9575-b9c80c77862c)
+
 I needed to build a wardriving kit that can be put on a small FPV drone. Initially I started with Raspberry Pi with Kismet, but that was too big and heavy. While ESP32 doesn't support true monitor mode, it meets my specific needs. 
 
 I chose the AI Thinker ESP32 Cam module because it was very cheap, had built-in SD card reader, and offered an attachment for an external 2.4G antenna. 
 
 How it works:
+
 
 There are three key components to this project: 
 1. ESP32 with its WiFi Station capbility. (Covered by its organic WiFi library)
@@ -15,6 +18,7 @@ There are three key components to this project:
 https://github.com/fdivitto/MSP
 That's the MSP library I used. It is super simple and reliable. Supports all of the important messages.
 
+![IMG_1289](https://github.com/voxtelnismo/ESP32-Warflying/assets/47276106/3f6dec18-781e-4c67-91c4-976def80e6ec)
 
 Build instructions:
 
